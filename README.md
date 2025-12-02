@@ -5,30 +5,31 @@ Petit programme en Python qui permet de **charger**, **afficher**, **sauvegarder
 - Python installer sur la machine (vérif dans le terminal avec: python --version)
 
 ## 2. Structure du projet
-
+```
 data-filter/
-    code files/
-        main.py
-        save_load.py
-        filter.py
-        sorting.py
-        stats.py
-    data/
-        XXX.json
-        XXX.csv
-    README.md
-    Sujet.pdf
+├─ code files/
+│  ├─ main.py
+│  ├─ save_load.py
+│  ├─ filter.py
+│  ├─ sorting.py
+│  └─ stats.py
+├─ data/
+│  ├─ XXX.json
+│  └─ XXX.csv
+├─ README.md
+└─ Sujet.pdf
+```
 
 ## 3. Lancement du programme
 
 être dans le bon dossier, dans notre cas
-
+```
 cd data-filter/code files/
-
+```
 et executer le programme avec :
-
+```
 python main.py
-
+```
 ## 4. Utilisation du menu
 
 Choix 1 : Load Data, bien penser à mettre le nom et l'extension du fichier (le chemin de data/ est déjà gérer avec la fonciton add_path)
