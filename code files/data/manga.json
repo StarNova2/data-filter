@@ -1,0 +1,242 @@
+[
+  {
+    "rank": 1,
+    "title": "One Piece",
+    "author": "Eiichiro Oda",
+    "start_year": 1997,
+    "status": "ongoing",
+    "copies_sold_millions": 520
+  },
+  {
+    "rank": 2,
+    "title": "Golgo 13",
+    "author": "Takao Saito",
+    "start_year": 1968,
+    "status": "ongoing",
+    "copies_sold_millions": 300
+  },
+  {
+    "rank": 3,
+    "title": "Dragon Ball",
+    "author": "Akira Toriyama",
+    "start_year": 1984,
+    "status": "finished",
+    "copies_sold_millions": 260
+  },
+  {
+    "rank": 4,
+    "title": "Detective Conan",
+    "author": "Gosho Aoyama",
+    "start_year": 1994,
+    "status": "ongoing",
+    "copies_sold_millions": 270
+  },
+  {
+    "rank": 5,
+    "title": "Doraemon",
+    "author": "Fujiko F. Fujio",
+    "start_year": 1969,
+    "status": "finished",
+    "copies_sold_millions": 200
+  },
+  {
+    "rank": 6,
+    "title": "Slam Dunk",
+    "author": "Takehiko Inoue",
+    "start_year": 1990,
+    "status": "finished",
+    "copies_sold_millions": 170
+  },
+  {
+    "rank": 7,
+    "title": "Naruto",
+    "author": "Masashi Kishimoto",
+    "start_year": 1999,
+    "status": "finished",
+    "copies_sold_millions": 250
+  },
+  {
+    "rank": 8,
+    "title": "KochiKame",
+    "author": "Osamu Akimoto",
+    "start_year": 1976,
+    "status": "finished",
+    "copies_sold_millions": 155
+  },
+  {
+    "rank": 9,
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "author": "Koyoharu Gotouge",
+    "start_year": 2016,
+    "status": "finished",
+    "copies_sold_millions": 150
+  },
+  {
+    "rank": 10,
+    "title": "Attack on Titan",
+    "author": "Hajime Isayama",
+    "start_year": 2009,
+    "status": "finished",
+    "copies_sold_millions": 140
+  },
+  {
+    "rank": 11,
+    "title": "JoJo's Bizarre Adventure",
+    "author": "Hirohiko Araki",
+    "start_year": 1987,
+    "status": "ongoing",
+    "copies_sold_millions": 120
+  },
+  {
+    "rank": 12,
+    "title": "Bleach",
+    "author": "Tite Kubo",
+    "start_year": 2001,
+    "status": "finished",
+    "copies_sold_millions": 130
+  },
+  {
+    "rank": 13,
+    "title": "Haikyu!!",
+    "author": "Haruichi Furudate",
+    "start_year": 2012,
+    "status": "finished",
+    "copies_sold_millions": 55
+  },
+  {
+    "rank": 14,
+    "title": "Fullmetal Alchemist",
+    "author": "Hiromu Arakawa",
+    "start_year": 2001,
+    "status": "finished",
+    "copies_sold_millions": 80
+  },
+  {
+    "rank": 15,
+    "title": "Hunter x Hunter",
+    "author": "Yoshihiro Togashi",
+    "start_year": 1998,
+    "status": "ongoing",
+    "copies_sold_millions": 84
+  },
+  {
+    "rank": 16,
+    "title": "Fairy Tail",
+    "author": "Hiro Mashima",
+    "start_year": 2006,
+    "status": "finished",
+    "copies_sold_millions": 72
+  },
+  {
+    "rank": 17,
+    "title": "Jujutsu Kaisen",
+    "author": "Gege Akutami",
+    "start_year": 2018,
+    "status": "ongoing",
+    "copies_sold_millions": 90
+  },
+  {
+    "rank": 18,
+    "title": "My Hero Academia",
+    "author": "Kohei Horikoshi",
+    "start_year": 2014,
+    "status": "ongoing",
+    "copies_sold_millions": 85
+  },
+  {
+    "rank": 19,
+    "title": "Tokyo Ghoul",
+    "author": "Sui Ishida",
+    "start_year": 2011,
+    "status": "finished",
+    "copies_sold_millions": 47
+  },
+  {
+    "rank": 20,
+    "title": "Yu-Gi-Oh!",
+    "author": "Kazuki Takahashi",
+    "start_year": 1996,
+    "status": "finished",
+    "copies_sold_millions": 40
+  },
+  {
+    "rank": 21,
+    "title": "Rurouni Kenshin",
+    "author": "Nobuhiro Watsuki",
+    "start_year": 1994,
+    "status": "finished",
+    "copies_sold_millions": 55
+  },
+  {
+    "rank": 22,
+    "title": "Sailor Moon",
+    "author": "Naoko Takeuchi",
+    "start_year": 1991,
+    "status": "finished",
+    "copies_sold_millions": 35
+  },
+  {
+    "rank": 23,
+    "title": "Death Note",
+    "author": "Tsugumi Ohba & Takeshi Obata",
+    "start_year": 2003,
+    "status": "finished",
+    "copies_sold_millions": 30
+  },
+  {
+    "rank": 24,
+    "title": "Black Clover",
+    "author": "Yuki Tabata",
+    "start_year": 2015,
+    "status": "ongoing",
+    "copies_sold_millions": 20
+  },
+  {
+    "rank": 25,
+    "title": "Kingdom",
+    "author": "Yasuhisa Hara",
+    "start_year": 2006,
+    "status": "ongoing",
+    "copies_sold_millions": 100
+  },
+  {
+    "rank": 26,
+    "title": "The Seven Deadly Sins",
+    "author": "Nakaba Suzuki",
+    "start_year": 2012,
+    "status": "finished",
+    "copies_sold_millions": 38
+  },
+  {
+    "rank": 27,
+    "title": "Blue Lock",
+    "author": "Muneyuki Kaneshiro & Yusuke Nomura",
+    "start_year": 2018,
+    "status": "ongoing",
+    "copies_sold_millions": 30
+  },
+  {
+    "rank": 28,
+    "title": "Chainsaw Man",
+    "author": "Tatsuki Fujimoto",
+    "start_year": 2018,
+    "status": "ongoing",
+    "copies_sold_millions": 28
+  },
+  {
+    "rank": 29,
+    "title": "Spy x Family",
+    "author": "Tatsuya Endo",
+    "start_year": 2019,
+    "status": "ongoing",
+    "copies_sold_millions": 34
+  },
+  {
+    "rank": 30,
+    "title": "Berserk",
+    "author": "Kentaro Miura",
+    "start_year": 1989,
+    "status": "ongoing",
+    "copies_sold_millions": 60
+  }
+]

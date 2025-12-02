@@ -1,0 +1,77 @@
+[
+  {
+    "year": 2010,
+    "title": "Red Dead Redemption",
+    "publisher": "Rockstar Games"
+  },
+  {
+    "year": 2011,
+    "title": "The Elder Scrolls V: Skyrim",
+    "publisher": "Bethesda Softworks"
+  },
+  {
+    "year": 2012,
+    "title": "The Walking Dead",
+    "publisher": "Telltale Games"
+  },
+  {
+    "year": 2013,
+    "title": "Grand Theft Auto V",
+    "publisher": "Rockstar Games"
+  },
+  {
+    "year": 2014,
+    "title": "Dragon Age: Inquisition",
+    "publisher": "Electronic Arts"
+  },
+  {
+    "year": 2015,
+    "title": "The Witcher 3: Wild Hunt",
+    "publisher": "CD Projekt"
+  },
+  {
+    "year": 2016,
+    "title": "Overwatch",
+    "publisher": "Blizzard Entertainment"
+  },
+  {
+    "year": 2017,
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "publisher": "Nintendo"
+  },
+  {
+    "year": 2018,
+    "title": "God of War",
+    "publisher": "Sony Interactive Entertainment"
+  },
+  {
+    "year": 2019,
+    "title": "Sekiro: Shadows Die Twice",
+    "publisher": "Activision"
+  },
+  {
+    "year": 2020,
+    "title": "The Last of Us Part II",
+    "publisher": "Sony Interactive Entertainment"
+  },
+  {
+    "year": 2021,
+    "title": "It Takes Two",
+    "publisher": "Electronic Arts (EA Originals)"
+  },
+  {
+    "year": 2022,
+    "title": "Elden Ring",
+    "publisher": "Bandai Namco Entertainment"
+  },
+  {
+    "year": 2023,
+    "title": "Baldur's Gate 3",
+    "publisher": "Larian Studios"
+  },
+  {
+    "year": 2024,
+    "title": "Astro Bot",
+    "publisher": "Sony Interactive Entertainment"
+  }
+]
