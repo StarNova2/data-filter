@@ -1,7 +1,9 @@
 def filter(data_list, index, comparison, criteria):
     """
-    :param data_list: A list of dictionaries containing various attributes.
-    :param criteria: The index of the element used to filter data_list.
+    :param data_list: (list) A list of dictionaries containing various attributes.
+    :param index: (int) The index of the element used to filter data_list.
+    :param comparison: (int)
+    :param criteria: (int) 
     :return: The filtered elements from the list of dictionaries.
 
     Filters the data_list based on certain criteria.
@@ -16,14 +18,14 @@ def filter(data_list, index, comparison, criteria):
     if comparison == '1':
         #selectionne les éléments inférieurs à criteria
         for item in data_list:
-            if is_numeral:
+            if is_bool:
+                if item[index] != criteria:
+                    new_data_list.append(item)
+            elif is_numeral:
                 if item[index] < criteria:
                     new_data_list.append(item)
             elif is_str:
                 if criteria.lower() < item[index].lower():
-                    new_data_list.append(item)
-            elif is_bool:
-                if item[index] != criteria:
                     new_data_list.append(item)
             else: #is_list
                 if criteria < len(item[index]):
@@ -32,14 +34,14 @@ def filter(data_list, index, comparison, criteria):
     elif comparison == '2':
         #selectionne les éléments supérieurs à criteria
         for item in data_list:
-            if is_numeral:
+            if is_bool:
+                if item[index] != criteria:
+                    new_data_list.append(item)
+            elif is_numeral:
                 if item[index] > criteria:
                     new_data_list.append(item)
             elif is_str:
                 if criteria.lower() < item[index].lower():
-                    new_data_list.append(item)
-            elif is_bool:
-                if item[index] != criteria:
                     new_data_list.append(item)
             else: #is_list
                 if criteria > len(item[index]):
@@ -48,14 +50,14 @@ def filter(data_list, index, comparison, criteria):
     elif comparison == '3':
         #selectionne les éléments égaux à criteria
         for item in data_list:
-            if is_numeral:
+            if is_bool:
+                if item[index] == criteria:
+                    new_data_list.append(item)
+            elif is_numeral:
                 if item[index] == criteria:
                     new_data_list.append(item)
             elif is_str:
                 if criteria.lower() == item[index].lower():
-                    new_data_list.append(item)
-            elif is_bool:
-                if item[index] == criteria:
                     new_data_list.append(item)
             else: #is_list
                 if criteria == len(item[index]):
