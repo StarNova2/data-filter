@@ -4,6 +4,7 @@ import time
 def main():
     data = []
     undo_list = []
+    current_data = []
 
     while True:
         print()
@@ -25,6 +26,7 @@ def main():
             undo_list = []
             data = load_data()
             undo_list.append(data)
+            current_data = undo_list[-1]
 
         if current_data != []:
             current_data = undo_list[-1]
