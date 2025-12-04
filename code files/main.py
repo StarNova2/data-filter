@@ -25,9 +25,9 @@ def main():
             undo_list = []
             data = load_data()
             undo_list.append(data)
-        current_data = undo_list[-1]
 
         if current_data != []:
+            current_data = undo_list[-1]
             if choice == "2":
                 print("Current rows:", len(current_data))
                 time.sleep(0.5)
