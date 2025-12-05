@@ -41,7 +41,6 @@ def main():
                 stats(current_data)
             elif choice == "5":
                 undo_list.append(modif_data(current_data))
-                print(undo_list)
             elif choice == "6":
                 if len(undo_list)>1:
                     undo_list.pop()

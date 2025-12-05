@@ -71,6 +71,7 @@ def show_all_rows(data):
 
 
 def modif_data(data):
+    modified_data = data
     while True:
         print("\n==== MODIFICATION MENU ====")
         print("1. Sort data")
@@ -82,22 +83,91 @@ def modif_data(data):
         choice = input("\nYour choice : ")
 
         if choice == "1":
-            sort_menu(data)
+            modified_data = sort_menu(modified_data)
+            print("\nData sorted.")
+            time.sleep(1)
         elif choice == "2":
-            filter_menu(data)
-            time.sleep(0.5)
+            modified_data = filter_menu(modified_data)
+            print("\nData filtered.")
+            time.sleep(1)
         elif choice == "3":
             print("\n")
-            stats(data)
+            stats(modified_data)
         elif choice == "4":
             print("Returning to main menu")
-            break
+            return modified_data
         else:
             print("Invalid choice.")
             time.sleep(0.5)
 
 def sort_menu(data):
-    pass
+    while True:
+        sort_index = 1
+        print("\nRows you can sort data by :")
+        for i in data[0].keys():
+            print(f"{sort_index}. {i}")
+            sort_index +=1
+        index_input = input("\nWhat row to use for sorting ?\n")
+
+        try:
+            index_input = int(index_input)-1
+            if index_input >= 0 and index_input < len(data[0]):
+                while True:
+                    sort_key = input("\nIn what order will the data be sorted ? (0 for ascending, 1 for descending)\n")
+
+                    try:
+                        sort_key = int(sort_key)
+                        if sort_key == 0 or sort_key == 1:
+                            return sort_function(data,index_input,sort_key)       
+                                             
+                        else:
+                            print("\nIncorrect choice")
+
+                    except ValueError:
+                        print("\nIncorrect choice")
+
+            else:
+                print("\nIncorrect index")
+
+        except ValueError:
+            print("\nIncorrect choice")
 
 def filter_menu(data):
-    pass
+    # 1 data 2 index 3 criteria 4 comparison
+    while True:
+        sort_index = 1
+        print("\nRows you can filter data by :")
+        for i in data[0].keys():
+            print(f"{sort_index}. {i}")
+            sort_index +=1
+        index_input = input("\nWhat row to use for filtering ?\n")
+
+        try:
+            index_input = int(index_input)-1
+            if index_input >= 0 and index_input < len(data[0]):
+                while True:
+                    criteria = input("\nWhat is the criteria you will be filtering the data by ? (int)\n")
+
+                    try:
+                        criteria = int(criteria)
+                        while True:
+                            comparison = input("\nBy what way the data will be sorted ? (1 for data under the criteria, 2 for data over the criteria, 3 for data equals to the criteria\n")
+
+                            try:
+                                comparison = int(comparison)
+                                if comparison == 1 or comparison == 2 or comparison == 3:
+                                    return filter(data,index_input,criteria,comparison)       
+                                                        
+                                else:
+                                    print("\nIncorrect choice")
+
+                            except ValueError:
+                                print("\nIncorrect choice")
+                    except ValueError:
+                        print("\nIncorrect input")
+
+            else:
+                print("\nIncorrect index")
+
+        except ValueError:
+            print("\nIncorrect choice")
