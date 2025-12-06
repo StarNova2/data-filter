@@ -9,7 +9,16 @@ def load_csv(file_name):
         with open(file_name, newline="", encoding="utf-8") as file:
             reader = csv.DictReader(file)
             for row in reader:
-                data_list.append(dict(row))
+                converted_row = {}
+                for key, value in row.items():
+                    try:
+                        converted_row[key] = int(value)
+                    except ValueError:
+                        try:
+                            converted_row[key] = float(value)
+                        except ValueError:
+                            converted_row[key] = value
+                data_list.append(converted_row)
     except FileNotFoundError:
         print("CSV file not found:", file_name)
     except Exception as error:
