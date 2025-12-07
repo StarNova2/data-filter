@@ -38,10 +38,16 @@ Choix 2 : Affiche le nombre d’éléments dans la liste
 
 choix 3 : Affiche toutes les lignes (j'ai pas eu de json à 10k lignes pour test de tout casser)
 
-choix 4 : il va sauvegarder ta liste (si t'en as une, sinon t'auras un message d'erreur) dans le format que tu veux, tu lui donnes un nom et tu choisis l'extension,
+Choix 4 : Montrer les statistiques de la liste
+
+Choix 5 : Ouvre le menu de modification (tri, filtre, stats)
+
+Choix 6 : Le undo des changements appliqués à la liste 
+
+choix 7 : il va sauvegarder ta liste (si t'en as une, sinon t'auras un message d'erreur) dans le format que tu veux, tu lui donnes un nom et tu choisis l'extension,
           ça va rajouter l'extension directement après le nom choisi et enregistrer le fichier dans le dossier data
 
-choix 5 : Finito pipo on quitte le programme
+choix 8 : Finito pipo on quitte le programme
 
 ## 5. Fonctionnement global du code
 
