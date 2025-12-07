@@ -44,7 +44,7 @@ Choix 5 : Ouvre le menu de modification (tri, filtre, stats)
 
 Choix 6 : Le undo des changements appliqués à la liste 
 
-choix 7 : il va sauvegarder ta liste (si t'en as une, sinon t'auras un message d'erreur) dans le format que tu veux, tu lui donnes un nom et tu choisis l'extension,
+choix 7 : Sauvegarde de la dernière version de la liste (si t'en as une, sinon t'auras un message d'erreur) dans le format que tu veux, tu lui donnes un nom et tu choisis l'extension,
           ça va rajouter l'extension directement après le nom choisi et enregistrer le fichier dans le dossier data
 
 choix 8 : Finito pipo on quitte le programme
