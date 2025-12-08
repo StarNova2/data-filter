@@ -6,6 +6,33 @@ def main():
     undo_list = []
     current_data = []
 
+    print(f"""{bcolors.BOLD}{bcolors.GREEN}
+          
+
+
+======================================================
+======================================================{bcolors.ENDC}
+{bcolors.BOLD}
+              8888    888   88888   888           
+              8   8  8   8    8    8   8              
+              8   8  88888    8    88888                
+              8   8  8   8    8    8   8          
+              8888   8   8    8    8   8          
+
+        88888  88888  8    88888  88888  8888    
+        8        8    8      8    8      8   8       
+        888      8    8      8    888    8888    
+        8        8    8      8    8      8   8   
+        8      88888  88888  8    88888  8   8
+
+{bcolors.GREEN}{bcolors.BOLD}======================================================
+======================================================{bcolors.ENDC}
+
+
+
+    """)
+    time.sleep(2)
+    
     while True:
         print()
         print(f"\n{bcolors.BOLD}{bcolors.YELLOW}========= MENU ========={bcolors.ENDC}")
@@ -47,9 +74,9 @@ def main():
                     undo_list.pop()
                     current_data = undo_list[-1]
                     print("Changes are undone")
-                    time.sleep(1)
                 else:
                     print("Nothing to undo yet")
+                time.sleep(1)
             elif choice == "7":
                 save_data(current_data)
                 time.sleep(1)
