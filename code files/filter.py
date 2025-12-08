@@ -13,8 +13,8 @@ def filter(data_list, index, criteria, comparison):
     index = list(data_list[0].keys())[index]
 
     is_numeral = isinstance(data_list[0][index],int) or isinstance(data_list[0][index],float)
-    is_str = isinstance(data_list[0][index],str)
     is_bool = isinstance(data_list[0][index],bool)
+    #is_str = isinstance(data_list[0][index],str)
     #is_list = isinstance(list(data_list[0].keys())[index],list)
 
     if comparison == 1:
@@ -26,15 +26,12 @@ def filter(data_list, index, criteria, comparison):
             elif is_numeral:
                 if item[index] < criteria:
                     new_data_list.append(item)
-            elif is_str:
-                if criteria.lower() < item[index].lower():
-                    new_data_list.append(item)
-            else: #is_list
+            else: #is_str or is_list
                 if criteria < len(item[index]):
                     new_data_list.append(item)
                     
     elif comparison == 2:
-        #select elements inferiorto criteria
+        #select elements inferior to criteria
         for item in data_list:
             if is_bool:
                 if item[index] != criteria:
@@ -42,10 +39,7 @@ def filter(data_list, index, criteria, comparison):
             elif is_numeral:
                 if item[index] > criteria:
                     new_data_list.append(item)
-            elif is_str:
-                if criteria.lower() < item[index].lower():
-                    new_data_list.append(item)
-            else: #is_list
+            else: #is_str or is_list
                 if criteria > len(item[index]):
                     new_data_list.append(item)
 
@@ -58,10 +52,7 @@ def filter(data_list, index, criteria, comparison):
             elif is_numeral:
                 if item[index] == criteria:
                     new_data_list.append(item)
-            elif is_str:
-                if criteria.lower() == item[index].lower():
-                    new_data_list.append(item)
-            else: #is_list
+            else: #is_str or is_list
                 if criteria == len(item[index]):
                     new_data_list.append(item)
     

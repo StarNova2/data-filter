@@ -38,6 +38,7 @@ def main():
                 input("\nDone watching ?")
             elif choice == "4":
                 print("\n")
+                print(f"{bcolors.BOLD}==== STATS ===={bcolors.ENDC}")
                 stats(current_data)
             elif choice == "5":
                 undo_list.append(modif_data(current_data))
@@ -46,6 +47,7 @@ def main():
                     undo_list.pop()
                     current_data = undo_list[-1]
                     print("Changes are undone")
+                    time.sleep(1)
                 else:
                     print("Nothing to undo yet")
             elif choice == "7":

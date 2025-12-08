@@ -58,15 +58,24 @@ def stats(data_list):
     for i in stats_list:
         stats_final.append(list(i.items()))
 
+    display_width = len(max(different_attributes_names,key=len))+2
     for name in different_attributes_names:
-        print(f"{name.upper()}, type : {type(data_list[0][different_attributes_names[index]]).__name__}, stats : ",end="")
+        upper_name = name.upper()
+        attr_type = type(data_list[0][name]).__name__
+
+        formatted_line = "| {0:<{width}}| type : {1:<4}; stats : (".format(
+            upper_name,
+            attr_type,
+            width=display_width
+        )
+        print(formatted_line,end="")
         for i in stats_final[index]:
             if i == stats_final[index][-1]:
                 print(f"{i[0]} : {i[1]}",end="")
             else:
                 print(f"{i[0]} : {i[1]}, ",end="")
-        print("")
+        print(")")
         index +=1
 
-    print("\n")
+    print("")
     input("Done watching ? ")

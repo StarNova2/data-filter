@@ -14,14 +14,16 @@ class bcolors:
     BOLD = '\033[1m'
     ENDC = '\033[0m'
 
+#==================================== LOADING / SAVING DATA ====================================
+
 def add_path(file_name):
     if "/" not in file_name and "\\" not in file_name:
         file_name = "data/" + file_name
     return file_name
 
 def load_data():
-    print("\n=== LOAD DATA ===")
-    file_name = input("File name (ex: name.csv or name.json) : ")
+    print(f"\n{bcolors.BOLD}==== LOAD DATA ===={bcolors.ENDC}")
+    file_name = input("┌File name (ex: name.csv or name.json) :\n├")
     file_name_splitted = file_name.split(".")
     file_type = file_name_splitted[-1]
 
@@ -32,18 +34,19 @@ def load_data():
     elif file_type == "json":
         data = load_json(file_name)
     else:
-        print("Unsupported or unknown type.")
+        print("└Unsupported or unknown type.")
         return []
 
-    print("Loaded", len(data), "rows.")
+    print("│\n├Loaded", len(data), "rows.")
     if data:
-        print("First row:", data[0])
+        print("└First row:", data[0])
+    time.sleep(1)
     return data
 
 def save_data(data):
-    print("\n=== SAVE DATA ===")
-    file_name = input("Output file name (ex: goty) : ")
-    file_type = input("File type (csv/json) : ").strip().lower()
+    print(f"\n{bcolors.BOLD}==== SAVE DATA ===={bcolors.ENDC}")
+    file_name = input("┌Output file name (ex: goty) :\n├")
+    file_type = input("├File type (csv/json) :\n├").strip().lower()
 
     if file_type == "csv" and not file_name.endswith(".csv"):
         file_name += ".csv"
@@ -57,10 +60,10 @@ def save_data(data):
     elif file_type == "json":
         save_json(file_name, data)
     else:
-        print("What is that ? The only existing types in the universe are csv and json.")
+        print("└What is that ? The only existing types in the universe are csv and json.")
 
 def show_all_rows(data):
-    print("\n=== ALL ROWS ===")
+    print(f"\n{bcolors.BOLD}=== ALL ROWS ==={bcolors.ENDC}")
     if not data:
         print("No data to show.")
         return
@@ -69,32 +72,34 @@ def show_all_rows(data):
         print(f"Row {index}: {row}")
 
 
-
+#============================= MODIFICATION MENU =============================
 def modif_data(data):
     modified_data = data
     while True:
-        print("\n==== MODIFICATION MENU ====")
+        print(f"\n{bcolors.BLUE}==== MODIFICATION MENU ===={bcolors.ENDC}")
         print("1. Sort data")
         print("2. Filter data")
         print("3. Get the stats")
         print("4. Back")
-        print("===========================")
+        print(f"{bcolors.BLUE}==========================={bcolors.ENDC}")
 
         choice = input("\nYour choice : ")
 
         if choice == "1":
             modified_data = sort_menu(modified_data)
-            print("\nData sorted.")
+            print("│\n└Data sorted.")
             time.sleep(1)
         elif choice == "2":
             modified_data = filter_menu(modified_data)
-            print("\nData filtered.")
+            print("│\n└Data filtered.")
             time.sleep(1)
         elif choice == "3":
             print("\n")
+            print(f"{bcolors.BOLD}==== STATS ===={bcolors.ENDC}")
             stats(modified_data)
         elif choice == "4":
             print("Returning to main menu")
+            time.sleep(2)
             return modified_data
         else:
             print("Invalid choice.")
@@ -103,17 +108,18 @@ def modif_data(data):
 def sort_menu(data):
     while True:
         sort_index = 1
-        print("\nRows you can sort data by :")
+        print(f"\n{bcolors.BOLD}==== SORTING DATA ===={bcolors.ENDC}")
+        print("┌Rows you can sort data by :")
         for i in data[0].keys():
-            print(f"{sort_index}. {i}")
+            print(f"├{sort_index}. {i}")
             sort_index +=1
-        index_input = input("\nWhat row to use for sorting ?\n")
+        index_input = input("│\n├What row to use for sorting ?\n├")
 
         try:
             index_input = int(index_input)-1
             if index_input >= 0 and index_input < len(data[0]):
                 while True:
-                    sort_key = input("\nIn what order will the data be sorted ? (0 for ascending, 1 for descending)\n")
+                    sort_key = input("│\n├In what order will the data be sorted ? (0 for ascending, 1 for descending)\n├")
 
                     try:
                         sort_key = int(sort_key)
@@ -121,37 +127,38 @@ def sort_menu(data):
                             return sort_function(data,index_input,sort_key)       
                                              
                         else:
-                            print("\nIncorrect choice")
+                            print("│\n├Incorrect choice")
 
                     except ValueError:
-                        print("\nIncorrect choice")
+                        print("│\n├Incorrect choice")
 
             else:
-                print("\nIncorrect index")
+                print("│\n├Incorrect index")
 
         except ValueError:
-            print("\nIncorrect choice")
+            print("│\n└Incorrect choice")
 
 def filter_menu(data):
     # 1 data 2 index 3 criteria 4 comparison
     while True:
+        print(f"\n{bcolors.BOLD}==== FILTERING DATA ===={bcolors.ENDC}")
         sort_index = 1
-        print("\nRows you can filter data by :")
+        print("┌Rows you can filter data by :")
         for i in data[0].keys():
-            print(f"{sort_index}. {i}")
+            print(f"├{sort_index}. {i}")
             sort_index +=1
-        index_input = input("\nWhat row to use for filtering ?\n")
+        index_input = input("│\n├What row to use for filtering ?\n├")
 
         try:
             index_input = int(index_input)-1
             if index_input >= 0 and index_input < len(data[0]):
                 while True:
-                    criteria = input("\nWhat is the criteria you will be filtering the data by ? (int)\n")
+                    criteria = input("│\n├What is the criteria you will be filtering the data by ? (int)\n├")
 
                     try:
                         criteria = int(criteria)
                         while True:
-                            comparison = input("\nBy what way the data will be sorted ? (1 for data under the criteria, 2 for data over the criteria, 3 for data equals to the criteria\n")
+                            comparison = input("│\n├By what way the data will be sorted ? (1 for data under the criteria, 2 for data over the criteria, 3 for data equals to the criteria\n├")
 
                             try:
                                 comparison = int(comparison)
@@ -159,15 +166,15 @@ def filter_menu(data):
                                     return filter(data,index_input,criteria,comparison)       
                                                         
                                 else:
-                                    print("\nIncorrect choice")
+                                    print("│\n├Incorrect choice")
 
                             except ValueError:
-                                print("\nIncorrect choice")
+                                print("│\n├Incorrect choice")
                     except ValueError:
-                        print("\nIncorrect input")
+                        print("│\n├Incorrect input")
 
             else:
-                print("\nIncorrect index")
+                print("│\n├Incorrect index")
 
         except ValueError:
-            print("\nIncorrect choice")
+            print("│\n└Incorrect choice")
